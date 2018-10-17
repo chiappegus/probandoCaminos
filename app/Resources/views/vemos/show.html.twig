@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vemo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ vemo.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ vemo.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellido</th>
+                <td>{{ vemo.apellido }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ vemo.tel }}</td>
+            </tr>
+            <tr>
+                <th>Cargo</th>
+                <td>{{ vemo.cargo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('vemos_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('vemos_edit', { 'id': vemo.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

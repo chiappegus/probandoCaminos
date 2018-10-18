@@ -137,9 +137,40 @@ php bin/console doctrine:generate:entities ProbandoBundle/Entity
 <!--====  End of Section comment  ====-->
 
 /*=============================================
-=           Borrando y regenerando los ORM 
-             / agregar campo de las entidades           =
+=                   =
 =============================================*/
+
+algunos comentarios :
+si en tenes o agregaste campos nuevo tanto en el orm y en la entidades
+y tiras :php bin/cnsole doctrine:mapping:info
+
+C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>php bin/c
+nsole doctrine:mapping:info
+Found 2 mapped entities:
+[OK]   ProbandoBundle\Entity\Municipalidad
+[OK]   ProbandoBundle\Entity\Vemos
+
+No detecta la diferencia
+
+Pero si :: php bin/console doctrine:schema:validate
+C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>php bin/co
+nsole doctrine:schema:validate
+[Mapping]  OK - The mapping files are correct.
+[Database] FAIL - The database schema is not in sync with the current mapping fi
+le.
+
+
+depues de agregar el campo : hacemos un :: php bin/console doctrine:schema:update --force
+
+Updating database schema...
+Database schema updated successfully! "1" query was executed
+
+y ahora ::php bin/console doctrine:schema:validate 
+
+C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>php bin/co
+nsole doctrine:schema:validate
+[Mapping]  OK - The mapping files are correct.
+[Database] OK - The database schema is in sync with the mapping files.
 
 
 
@@ -148,8 +179,12 @@ php bin/console doctrine:generate:entities ProbandoBundle/Entity
 
 
 
+
+
 /*=============================================
-=           agregar campo de las entidades           =
+=         Borrando y regenerando los ORM 
+             / agregar campo de las entidades  
+                agregar campo de las entidades           =
 =============================================*/
 
 

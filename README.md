@@ -106,12 +106,54 @@ generate:doctrine:form
 
 
 
+
+
 Se hace un crud
 
 generate:doctrine:crud
 
 
 
+<!--=====================================
+=            agregar campos          =
+======================================-->
 
+para agregar objetos los tuve que agregar del Resources/config/doctrine-->
+src\ProbandoBundle\Resources\config\doctrine
+Minucipalidad.orm.xml
+
+ <field name="cargo2" type="string" column="cargo2" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+
+y luego de ahi mapaer 
+
+esto da los getter y setter !!! ya que si hago una variable en la entidad no da bola
+si existe los orm !! quizas abria que borrar y generarlas nuevamente
+
+php bin/console doctrine:generate:entities ProbandoBundle/Entity
+<!--====  End of Section comment  ====-->
+
+/*=============================================
+=           Borrando y regenerando los ORM 
+             / agregar campo de las entidades           =
+=============================================*/
+
+
+
+/*=====  End of Section comment block  ======*/
+
+
+
+
+/*=============================================
+=           agregar campo de las entidades           =
+=============================================*/
+
+
+
+/*=====  End of Section comment block  ======*/
 
 

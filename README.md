@@ -39,66 +39,7 @@ s ^2.8) is satisfiable by symfony/monolog-bundle[v3.3.0] but these conflict with
 *) is satisfiable by symfony/symfony[v3.4.17] but these conflict with your requi
 rements or minimum-stability.
   Problem 4
-    - Conclusion: don't install symfony/symfony v3.1.10
-    - Conclusion: don't install symfony/symfony v3.1.9
-    - Conclusion: don't install symfony/symfony v3.1.8
-    - Conclusion: don't install symfony/symfony v3.1.7
-    - Conclusion: don't install symfony/symfony v3.1.6
-    - Conclusion: don't install symfony/symfony v3.1.5
-    - Conclusion: don't install symfony/symfony v3.1.4
-    - Conclusion: don't install symfony/symfony v3.1.3
-    - Installation request for symfony/maker-bundle ^1.8 -> satisfiable by symfo
-ny/maker-bundle[v1.8.0].
-    - Conclusion: don't install symfony/symfony v3.1.2
-    - Conclusion: don't install symfony/symfony v3.1.1
-    - symfony/maker-bundle v1.8.0 requires symfony/finder ^3.4|^4.0 -> satisfiab
-le by symfony/symfony[v3.4.17], symfony/finder[v3.4.0, v3.4.1, v3.4.10, v3.4.11,
- v3.4.12, v3.4.13, v3.4.14, v3.4.15, v3.4.16, v3.4.17, v3.4.2, v3.4.3, v3.4.4, v
-3.4.5, v3.4.6, v3.4.7, v3.4.8, v3.4.9, v4.0.0, v4.0.1, v4.0.10, v4.0.11, v4.0.12
-, v4.0.13, v4.0.14, v4.0.2, v4.0.3, v4.0.4, v4.0.5, v4.0.6, v4.0.7, v4.0.8, v4.0
-.9, v4.1.0, v4.1.1, v4.1.2, v4.1.3, v4.1.4, v4.1.5, v4.1.6].
-    - Can only install one of: symfony/symfony[v3.1.0, v3.4.17].
-    - don't install symfony/finder v3.4.0|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.1|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.10|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.11|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.12|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.13|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.14|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.15|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.16|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.17|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.2|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.3|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.4|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.5|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.6|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.7|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.8|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v3.4.9|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.0|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.1|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.10|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.11|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.12|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.13|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.14|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.2|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.3|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.4|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.5|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.6|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.7|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.8|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.0.9|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.0|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.1|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.2|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.3|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.4|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.5|don't install symfony/symfony v3.1.0
-    - don't install symfony/finder v4.1.6|don't install symfony/symfony v3.1.0
-    - Installation request for symfony/symfony 3.1.* -> satisfiable by symfony/s
+  
 ymfony[v3.1.0, v3.1.1, v3.1.10, v3.1.2, v3.1.3, v3.1.4, v3.1.5, v3.1.6, v3.1.7,
 v3.1.8, v3.1.9].
 
@@ -140,3 +81,37 @@ return $this->render('@Probando/municipalidad/edit.html.twig', array(
             'edit_form'     => $editForm->createView(),
             'delete_form'   => $deleteForm->createView(),
         ));
+
+
+/* */
+
+/* para redondear :*/*/
+
+para entrar en tema primero se generan las entidades.
+doctrine:generate:entity
+
+
+
+luego se pueden mapear.
+
+doctrine:mapping:convert
+
+
+y luego se sube
+
+php bin/console doctrine:schema:update --force
+
+se hacen los form :
+generate:doctrine:form
+
+
+
+Se hace un crud
+
+generate:doctrine:crud
+
+
+
+
+
+

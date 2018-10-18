@@ -2,23 +2,19 @@
 
 namespace ProbandoBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-
+use ProbandoBundle\Entity\Vemos;
 use ProbandoBundle\Form\vemosType;
-use ProbandoBundle\Entity\vemos;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class DefaultController extends AbstractController
-{    
+{
     public function indexAction()
     {
         return $this->render('@Probando/Default/index.html.twig');
     }
-
 
     /**
      * @Route("/register", name="user_registration")
@@ -27,8 +23,8 @@ class DefaultController extends AbstractController
     {
         // 1) build the form
         //$user = new User();
-        $vemos = new vemos();
-        $form = $this->createForm(vemosType::class, $vemos);
+        $vemos = new Vemos();
+        $form  = $this->createForm(vemosType::class, $vemos);
 
         // 2) handle the submit (will only happen on POST)
         $form->handleRequest($request);
@@ -48,7 +44,7 @@ class DefaultController extends AbstractController
 
             return $this->redirectToRoute('probando_homepage');
         }
-       
+
         return $this->render(
             '@Probando/registration/register.html.twig',
             array('form' => $form->createView())

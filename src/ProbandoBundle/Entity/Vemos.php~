@@ -155,33 +155,4 @@ class Vemos
     {
         return $this->id;
     }
-    /**
-     * @var string
-     */
-    private $cargo2;
-
-
-    /**
-     * Set cargo2
-     *
-     * @param string $cargo2
-     *
-     * @return Vemos
-     */
-    public function setCargo2($cargo2)
-    {
-        $this->cargo2 = $cargo2;
-
-        return $this;
-    }
-
-    /**
-     * Get cargo2
-     *
-     * @return string
-     */
-    public function getCargo2()
-    {
-        return $this->cargo2;
-    }
 }

@@ -3,9 +3,9 @@
 namespace ProbandoBundle\Controller;
 
 use ProbandoBundle\Entity\vemos;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Vemo controller.
@@ -39,7 +39,7 @@ class vemosController extends Controller
      */
     public function newAction(Request $request)
     {
-        $vemo = new Vemo();
+        $vemo = new Vemos();
         $form = $this->createForm('ProbandoBundle\Form\vemosType', $vemo);
         $form->handleRequest($request);
 
@@ -68,7 +68,7 @@ class vemosController extends Controller
         $deleteForm = $this->createDeleteForm($vemo);
 
         return $this->render('vemos/show.html.twig', array(
-            'vemo' => $vemo,
+            'vemo'        => $vemo,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -82,7 +82,7 @@ class vemosController extends Controller
     public function editAction(Request $request, vemos $vemo)
     {
         $deleteForm = $this->createDeleteForm($vemo);
-        $editForm = $this->createForm('ProbandoBundle\Form\vemosType', $vemo);
+        $editForm   = $this->createForm('ProbandoBundle\Form\vemosType', $vemo);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -92,8 +92,8 @@ class vemosController extends Controller
         }
 
         return $this->render('vemos/edit.html.twig', array(
-            'vemo' => $vemo,
-            'edit_form' => $editForm->createView(),
+            'vemo'        => $vemo,
+            'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

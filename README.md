@@ -110,6 +110,17 @@ C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>
 https://symfony.com/doc/current/doctrine.html
 
 
+
+https://symfony.com/doc/current/doctrine/reverse_engineering.html
 Para pasar de base de datos a entity :)
 
+
 php bin/console doctrine:mapping:import 'ProbandoBundle\Entity' annotation --path=src/ProbandoBundle/Entity
+
+
+// generates getter/setter methods
+ php bin/console make:entity --regenerate ProbandoBundle
+https://symfony.com/doc/2.0/book/doctrine.html#generating-getters-and-setters
+ $ php app/console doctrine:generate:entities Acme/StoreBundle/Entity/Product
+
+ php bin/console doctrine:generate:entities ProbandoBundle/Entity

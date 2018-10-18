@@ -14,16 +14,16 @@ class vemosType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nombre')
-                ->add('apellido')
-                ->add('tel')
-                ->add('cargo');
+            ->add('apellido')
+            ->add('tel')
+            ->add('cargo');
     }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ProbandoBundle\Entity\vemos'
+            'data_class' => 'ProbandoBundle\Entity\vemos',
         ));
     }
 
@@ -34,6 +34,5 @@ class vemosType extends AbstractType
     {
         return 'probandobundle_vemos';
     }
-
 
 }

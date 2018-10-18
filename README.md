@@ -211,6 +211,8 @@ php bin/console generate:doctrine:crud
 
 buscamos la entidad que piden :
 ProbandoBundle:Vemos
+ProbandoBundle\Resources\views\Vemos
+
 ProbandoBundle\Resources\views\municipalidad
 
 
@@ -294,3 +296,99 @@ ProbandoBundle\Resources\views\municipalidad
 /*=====  End of Section comment block  ======*/
 
 
+/*=============================================
+=         Borrando y regenerando los ORM 
+             / agregar campo de las entidades  
+                agregar campo de las entidades           =
+=============================================*/
+
+
+se borro la orm vemos
+
+
+C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>php bin/co
+nsole doctrine:mapping:import ProbandoBundle
+Importing mapping information from "default" entity manager
+  > writing C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\proband
+o\src\ProbandoBundle/Resources/config/doctrine/Municipalidad.orm.xml
+  > writing C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\proband
+o\src\ProbandoBundle/Resources/config/doctrine/Vemos.orm.xml
+
+excelente con->  php bin/console doctrine:mapping:import ProbandoBundle
+
+se regeneran
+
+ahora se borra nuevamente!! y en la entity vamos a generar un campo nuevo
+vamos a ver si lo toma!!
+pero antes vamos a generar los getter y veri si funciona!!
+
+
+php bin/console doctrine:generate:entities ProbandoBundle/Entity
+
+borramos el  Vemos.orm.xml
+
+borramos lo getter y setter. del entity Vemos.php
+
+
+/*/*/ grabe si no esta el orm no se puede generar el entidad ya que la llama a ella!!
+
+entonces (No funciona)
+1 borramos los getter y setter de la entity
+2 generamo el orm , vemos si incoporo los cambios  php bin/console doctrine:mapping:import ProbandoBundle 
+3 vemos si se generan lo getter y setter php bin/console doctrine:generate:entities ProbandoBundle/Entity
+
+
+(el 2 no funciona) ya que toma los datos de la base de datos!!
+entonces deberiamos hacer los siguiente :
+1 borramos el orm , borramos lo getter y setter generamos los campos ,
+2 updateamos a la base!! 
+php bin/console doctrine:schema:update --force
+3 generamos el orm
+4 le damos a la entities
+
+lo que funciona!!
+se deben borrar los orm!! todos!!
+y poner bien el la entidad la anotacion orm
+
+ejemplo :
+    /**
+     * @var string
+     * @ORM\Column(name="cargo2", type="string", length=255, nullable=false)
+     */
+    private $cargo2;
+
+luego se generan los getter y setter con : 
+
+php bin/console doctrine:generate:entities ProbandoBundle/Entity 
+
+(ojo siguen borrado lo ORM , si quiero los genero nuevamente con :
+
+php bin/console doctrine:mapping:import ProbandoBundle 
+
+pero mi idea es no ponerlo con eso , sino ahora ver si escribe directamente en la basedatos
+ya no esta los ORM 
+
+
+
+
+)   
+
+vamos :
+php bin/console doctrine:schema:update --force
+
+
+C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>php bin/co
+nsole doctrine:schema:update --force
+Updating database schema...
+Database schema updated successfully! "1" query was executed
+
+excelente !!!
+impacto en la base de datos!!
+
+ahora genero los ORM  con :
+
+
+php bin/console doctrine:mapping:import ProbandoBundle
+
+LISTO!!!!
+:) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) 

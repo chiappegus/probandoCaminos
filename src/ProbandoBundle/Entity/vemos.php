@@ -49,6 +49,34 @@ class Vemos
      */
     private $cargo;
 
+    /**
+     * @var string
+     * @ORM\Column(name="cargo1", type="string", length=255, nullable=false)
+     */
+    private $cargo1;
+
+
+    /**
+     * @var string
+     * @ORM\Column(name="cargo2", type="string", length=255, nullable=false)
+     */
+    private $cargo2;
+
+
+
+    
+
+  
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set nombre
@@ -147,19 +175,28 @@ class Vemos
     }
 
     /**
-     * Get id
+     * Set cargo1
      *
-     * @return integer
+     * @param string $cargo1
+     *
+     * @return Vemos
      */
-    public function getId()
+    public function setCargo1($cargo1)
     {
-        return $this->id;
-    }
-    /**
-     * @var string
-     */
-    private $cargo2;
+        $this->cargo1 = $cargo1;
 
+        return $this;
+    }
+
+    /**
+     * Get cargo1
+     *
+     * @return string
+     */
+    public function getCargo1()
+    {
+        return $this->cargo1;
+    }
 
     /**
      * Set cargo2

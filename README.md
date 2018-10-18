@@ -129,3 +129,14 @@ https://symfony.com/doc/2.0/book/doctrine.html#generating-getters-and-setters
 algo hermoso que es el crud!!!
 
 php bin/console  generate:doctrine:crud ProbandoBundle:Municipalidad
+
+
+/* 
+se hicieron correcciones -> ya que el crud no le gusta la entidades en minusculas.
+luego por que es la version de symfony el 3.4 hay que poner en el render :
+
+return $this->render('@Probando/municipalidad/edit.html.twig', array(
+            'municipalidad' => $municipalidad,
+            'edit_form'     => $editForm->createView(),
+            'delete_form'   => $deleteForm->createView(),
+        ));

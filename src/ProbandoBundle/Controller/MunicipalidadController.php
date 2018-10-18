@@ -44,8 +44,8 @@ class MunicipalidadController extends Controller
 
             return $this->redirectToRoute('ProbandoBundle_show', array('id' => $municipalidad->getId()));
         }
-
-        return $this->render('municipalidad/new.html.twig', array(
+        
+        return $this->render('@Probando/municipalidad/new.html.twig', array(
             'municipalidad' => $municipalidad,
             'form'          => $form->createView(),
         ));
@@ -58,8 +58,8 @@ class MunicipalidadController extends Controller
     public function showAction(Municipalidad $municipalidad)
     {
         $deleteForm = $this->createDeleteForm($municipalidad);
-
-        return $this->render('municipalidad/show.html.twig', array(
+       
+        return $this->render('@Probando/municipalidad/show.html.twig', array(
             'municipalidad' => $municipalidad,
             'delete_form'   => $deleteForm->createView(),
         ));
@@ -80,8 +80,8 @@ class MunicipalidadController extends Controller
 
             return $this->redirectToRoute('ProbandoBundle_edit', array('id' => $municipalidad->getId()));
         }
-
-        return $this->render('municipalidad/edit.html.twig', array(
+          
+        return $this->render('@Probando/municipalidad/edit.html.twig', array(
             'municipalidad' => $municipalidad,
             'edit_form'     => $editForm->createView(),
             'delete_form'   => $deleteForm->createView(),

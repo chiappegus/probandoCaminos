@@ -10,12 +10,12 @@ probando_reg:
 
 ProbandoBundle_index:
     path:     /muni
-    defaults: { _controller: "ProbandoBundle:Municipalidad:index" }
+    defaults: { _controller: ProbandoBundle:Municipalidad:index }
     methods:  GET
 
 ProbandoBundle_show:
     path:     /{id}/show
-    defaults: { _controller: "ProbandoBundle:Municipalidad:show" }
+    defaults: { _controller: ProbandoBundle:Municipalidad:show }
     methods:  GET
 
 ProbandoBundle_new:

@@ -1,0 +1,24 @@
+municipalidad_index:
+    path:     /
+    defaults: { _controller: "ProbandoBundle:Municipalidad:index" }
+    methods:  GET
+
+municipalidad_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProbandoBundle:Municipalidad:show" }
+    methods:  GET
+
+municipalidad_new:
+    path:     /new
+    defaults: { _controller: "ProbandoBundle:Municipalidad:new" }
+    methods:  [GET, POST]
+
+municipalidad_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProbandoBundle:Municipalidad:edit" }
+    methods:  [GET, POST]
+
+municipalidad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProbandoBundle:Municipalidad:delete" }
+    methods:  DELETE

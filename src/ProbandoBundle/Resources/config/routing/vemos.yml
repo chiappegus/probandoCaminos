@@ -1,0 +1,24 @@
+vemos_index:
+    path:     /
+    defaults: { _controller: "ProbandoBundle:Vemos:index" }
+    methods:  GET
+
+vemos_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProbandoBundle:Vemos:show" }
+    methods:  GET
+
+vemos_new:
+    path:     /new
+    defaults: { _controller: "ProbandoBundle:Vemos:new" }
+    methods:  [GET, POST]
+
+vemos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProbandoBundle:Vemos:edit" }
+    methods:  [GET, POST]
+
+vemos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProbandoBundle:Vemos:delete" }
+    methods:  DELETE

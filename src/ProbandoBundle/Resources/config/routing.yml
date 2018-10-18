@@ -1,34 +1,15 @@
+probando_ProbandoBundle:
+    resource: "@ProbandoBundle/Resources/config/routing/vemos.yml"
+    prefix:   /vemos
+probando_ProbandoBundle2:
+    resource: "@ProbandoBundle/Resources/config/routing/municipalidad.yml"
+    prefix:   /muni    
+
+
+
 probando_homepage:
     path:     /
     defaults: { _controller: ProbandoBundle:Default:index }
 
 
 
-probando_reg:
-    path:     /register
-    defaults: { _controller: ProbandoBundle:Default:register }
-
-ProbandoBundle_index:
-    path:     /muni
-    defaults: { _controller: ProbandoBundle:Municipalidad:index }
-    methods:  GET
-
-ProbandoBundle_show:
-    path:     /{id}/show
-    defaults: { _controller: ProbandoBundle:Municipalidad:show }
-    methods:  GET
-
-ProbandoBundle_new:
-    path:     /new
-    defaults: { _controller: "ProbandoBundle:Municipalidad:new" }
-    methods:  [GET, POST]
-
-ProbandoBundle_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "ProbandoBundle:Municipalidad:edit" }
-    methods:  [GET, POST]
-
-ProbandoBundle_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "ProbandoBundle:Municipalidad:delete" }
-    methods:  DELETE    

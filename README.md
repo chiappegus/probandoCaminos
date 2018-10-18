@@ -187,6 +187,108 @@ nsole doctrine:schema:validate
                 agregar campo de las entidades           =
 =============================================*/
 
+como ahora ya el vemos , si bien tiene form , que lo voy a eliminar 
+
+vamos a ver como completa con el crud !!
+y si lo completa borrando 
+ ProbandoBundle\Form\vemosType!!!
+
+ lo borrarmos ya que quiero que me hago con el nuevo campo que es : cargo2!!!
+
+ya que el viejo es  :
+
+$builder->add('nombre')
+            ->add('apellido')
+            ->add('tel')
+            ->add('cargo');
+Borramos el form 
+lanzamos el comando :
+haber si me tira el error el crud , ya que no va a encontrar el FORM
+
+espectacular me hizo todo , lo que no pude es ver el tema de las rutas que no me tita bien el view , que las hace en la app
+
+php bin/console generate:doctrine:crud
+
+buscamos la entidad que piden :
+ProbandoBundle:Vemos
+ProbandoBundle\Resources\views\municipalidad
+
+
+
+
+
+C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>php bin/co
+nsole generate:doctrine:crud
+
+
+  Welcome to the Doctrine2 CRUD generator
+
+
+
+This command helps you generate CRUD controllers and templates.
+
+First, give the name of the existing entity for which you want to generate a CRU
+D
+(use the shortcut notation like AcmeBlogBundle:Post)
+
+The Entity shortcut name: ProbandoBundle:Vemos
+
+By default, the generator creates two actions: list and show.
+You can also ask it to generate "write" actions: new, update, and delete.
+
+Do you want to generate the "write" actions [no]? yes
+
+Determine the format to use for the generated CRUD.
+
+Configuration format (yml, xml, php, or annotation) [annotation]: yml
+
+Determine the routes prefix (all the routes will be "mounted" under this
+prefix: /prefix/, /prefix/new, ...).
+
+Routes prefix [/vemos]: ProbandoBundle/Resources/views/
+
+
+  Summary before generation
+
+
+You are going to generate a CRUD controller for "ProbandoBundle:Vemos"
+using the "yml" format.
+
+Do you confirm generation [yes]?
+
+
+  CRUD generation
+
+
+  created .\src\ProbandoBundle/Controller//VemosController.php
+  updated .\app/Resources/views/vemos/index.html.twig
+  updated .\app/Resources/views/vemos/show.html.twig
+  updated .\app/Resources/views/vemos/new.html.twig
+  updated .\app/Resources/views/vemos/edit.html.twig
+  updated .\src\ProbandoBundle/Tests/Controller//VemosControllerTest.php
+  created .\src\ProbandoBundle/Resources/config/routing/vemos.yml
+Generating the CRUD code: OK
+  created .\src\ProbandoBundle/Form/VemosType.php
+Generating the Form code: OK
+Updating the routing: Confirm automatic update of the Routing [yes]?
+Importing the CRUD routes:   updated .\src\ProbandoBundle/Resources/config/routi
+ng.yml
+
+
+[ERROR] The bundle's "Resources/config/routing.yml" file cannot be imported
+from "app/config/routing.yml" because the "ProbandoBundle" bundle is
+already imported. Make sure you are not using two different
+configuration/routing formats in the same bundle because it won't work.
+OK
+
+
+  Everything is OK! Now get to work :).
+
+
+
+
+
+ProbandoBundle\Resources\views\municipalidad
 
 
 /*=====  End of Section comment block  ======*/

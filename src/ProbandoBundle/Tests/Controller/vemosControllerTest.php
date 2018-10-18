@@ -4,7 +4,7 @@ namespace ProbandoBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class vemosControllerTest extends WebTestCase
+class VemosControllerTest extends WebTestCase
 {
     /*
     public function testCompleteScenario()

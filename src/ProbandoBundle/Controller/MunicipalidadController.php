@@ -22,7 +22,7 @@ class MunicipalidadController extends Controller
 
         $municipalidads = $em->getRepository('ProbandoBundle:Municipalidad')->findAll();
 
-        return $this->render('@Probando/municipalidad/index.html.twig', array(
+        return $this->render('municipalidad/index.html.twig', array(
             'municipalidads' => $municipalidads,
         ));
     }
@@ -34,7 +34,7 @@ class MunicipalidadController extends Controller
     public function newAction(Request $request)
     {
         $municipalidad = new Municipalidad();
-        $form          = $this->createForm('ProbandoBundle\Form\MunicipalidadType', $municipalidad);
+        $form = $this->createForm('ProbandoBundle\Form\MunicipalidadType', $municipalidad);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -42,12 +42,12 @@ class MunicipalidadController extends Controller
             $em->persist($municipalidad);
             $em->flush();
 
-            return $this->redirectToRoute('ProbandoBundle_show', array('id' => $municipalidad->getId()));
+            return $this->redirectToRoute('municipalidad_show', array('id' => $municipalidad->getId()));
         }
-        
-        return $this->render('@Probando/municipalidad/new.html.twig', array(
+
+        return $this->render('municipalidad/new.html.twig', array(
             'municipalidad' => $municipalidad,
-            'form'          => $form->createView(),
+            'form' => $form->createView(),
         ));
     }
 
@@ -58,10 +58,10 @@ class MunicipalidadController extends Controller
     public function showAction(Municipalidad $municipalidad)
     {
         $deleteForm = $this->createDeleteForm($municipalidad);
-       
-        return $this->render('@Probando/municipalidad/show.html.twig', array(
+
+        return $this->render('municipalidad/show.html.twig', array(
             'municipalidad' => $municipalidad,
-            'delete_form'   => $deleteForm->createView(),
+            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -72,19 +72,19 @@ class MunicipalidadController extends Controller
     public function editAction(Request $request, Municipalidad $municipalidad)
     {
         $deleteForm = $this->createDeleteForm($municipalidad);
-        $editForm   = $this->createForm('ProbandoBundle\Form\MunicipalidadType', $municipalidad);
+        $editForm = $this->createForm('ProbandoBundle\Form\MunicipalidadType', $municipalidad);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('ProbandoBundle_edit', array('id' => $municipalidad->getId()));
+            return $this->redirectToRoute('municipalidad_edit', array('id' => $municipalidad->getId()));
         }
-          
-        return $this->render('@Probando/municipalidad/edit.html.twig', array(
+
+        return $this->render('municipalidad/edit.html.twig', array(
             'municipalidad' => $municipalidad,
-            'edit_form'     => $editForm->createView(),
-            'delete_form'   => $deleteForm->createView(),
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -103,7 +103,7 @@ class MunicipalidadController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('ProbandoBundle_index');
+        return $this->redirectToRoute('municipalidad_index');
     }
 
     /**
@@ -116,7 +116,7 @@ class MunicipalidadController extends Controller
     private function createDeleteForm(Municipalidad $municipalidad)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('ProbandoBundle_delete', array('id' => $municipalidad->getId())))
+            ->setAction($this->generateUrl('municipalidad_delete', array('id' => $municipalidad->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

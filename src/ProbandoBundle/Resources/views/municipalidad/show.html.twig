@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Municipalidad</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ municipalidad.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ municipalidad.direccion }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ municipalidad.tel }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ municipalidad.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ProbandoBundle_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('ProbandoBundle_edit', { 'id': municipalidad.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,13 +1,3 @@
-probando_homepage:
-    path:     /
-    defaults: { _controller: ProbandoBundle:Default:index }
-
-
-
-probando_reg:
-    path:     /register
-    defaults: { _controller: ProbandoBundle:Default:register }
-
 ProbandoBundle_index:
     path:     /muni
     defaults: { _controller: "ProbandoBundle:Municipalidad:index" }
@@ -31,4 +21,4 @@ ProbandoBundle_edit:
 ProbandoBundle_delete:
     path:     /{id}/delete
     defaults: { _controller: "ProbandoBundle:Municipalidad:delete" }
-    methods:  DELETE    
+    methods:  DELETE

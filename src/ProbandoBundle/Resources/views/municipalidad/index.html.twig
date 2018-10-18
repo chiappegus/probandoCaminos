@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Municipalidads list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Tel</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for municipalidad in municipalidads %}
+            <tr>
+                <td><a href="{{ path('ProbandoBundle_show', { 'id': municipalidad.id }) }}">{{ municipalidad.nombre }}</a></td>
+                <td>{{ municipalidad.direccion }}</td>
+                <td>{{ municipalidad.tel }}</td>
+                <td>{{ municipalidad.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ProbandoBundle_show', { 'id': municipalidad.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('ProbandoBundle_edit', { 'id': municipalidad.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ProbandoBundle_new') }}">Create a new municipalidad</a>
+        </li>
+    </ul>
+{% endblock %}

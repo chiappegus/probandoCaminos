@@ -124,3 +124,8 @@ https://symfony.com/doc/2.0/book/doctrine.html#generating-getters-and-setters
  $ php app/console doctrine:generate:entities Acme/StoreBundle/Entity/Product
 
  php bin/console doctrine:generate:entities ProbandoBundle/Entity
+
+
+algo hermoso que es el crud!!!
+
+php bin/console  generate:doctrine:crud ProbandoBundle:Municipalidad

@@ -1,3 +1,7 @@
+probando_municipalidad:
+    resource: "@ProbandoBundle/Controller/MunicipalidadController.php"
+    type:     annotation
+
 probando:
     resource: "@ProbandoBundle/Resources/config/routing.yml"
     prefix:   /

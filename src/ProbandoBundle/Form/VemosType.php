@@ -13,7 +13,7 @@ class VemosType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')->add('apellido')->add('tel')->add('cargo')->add('cargo2');
+        $builder->add('nombre')->add('apellido')->add('tel')->add('cargo')->add('cargo2')->add('cargo1');
     }/**
      * {@inheritdoc}
      */

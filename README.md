@@ -392,3 +392,19 @@ php bin/console doctrine:mapping:import ProbandoBundle
 
 LISTO!!!!
 :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) 
+
+
+ahora que sucede eso , el form no estaria bien!! ya que le faltan campos!!!!!
+
+An exception occurred while executing 'INSERT INTO vemos (nombre, apellido, tel, cargo, cargo2, cargo1) VALUES (?, ?, ?, ?, ?, ?)' with params ["pepe", "pepe", 465546654, "ayudante", "15", null]:
+
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cargo1' cannot be null
+
+generamos un crud , primero borramos el FORMtype
+  la carpeta view tambien!!
+  el controller!!
+
+
+  php bin/console  generate:doctrine:crud ProbandoBundle:Vemos
+
+

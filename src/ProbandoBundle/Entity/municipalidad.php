@@ -1,127 +1,47 @@
 <?php
 
-namespace ProbandoBundle\Entity;
+namespace 'ProbandoBundle\Entity';
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * municipalidad
+ * Municipalidad
  *
  * @ORM\Table(name="municipalidad")
- * @ORM\Entity(repositoryClass="ProbandoBundle\Repository\municipalidadRepository")
+ * @ORM\Entity
  */
-class municipalidad
+class Municipalidad
 {
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=255)
+     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
      */
     private $nombre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="direccion", type="string", length=255)
+     * @ORM\Column(name="direccion", type="string", length=255, nullable=false)
      */
     private $direccion;
 
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="tel", type="smallint")
+     * @ORM\Column(name="tel", type="smallint", nullable=false)
      */
     private $tel;
 
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set nombre
-     *
-     * @param string $nombre
-     *
-     * @return municipalidad
-     */
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
-
-        return $this;
-    }
-
-    /**
-     * Get nombre
-     *
-     * @return string
-     */
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
-
-    /**
-     * Set direccion
-     *
-     * @param string $direccion
-     *
-     * @return municipalidad
-     */
-    public function setDireccion($direccion)
-    {
-        $this->direccion = $direccion;
-
-        return $this;
-    }
-
-    /**
-     * Get direccion
-     *
-     * @return string
-     */
-    public function getDireccion()
-    {
-        return $this->direccion;
-    }
-
-    /**
-     * Set tel
-     *
-     * @param integer $tel
-     *
-     * @return municipalidad
-     */
-    public function setTel($tel)
-    {
-        $this->tel = $tel;
-
-        return $this;
-    }
-
-    /**
-     * Get tel
-     *
-     * @return int
-     */
-    public function getTel()
-    {
-        return $this->tel;
-    }
 }
+

@@ -1,158 +1,54 @@
 <?php
 
-namespace ProbandoBundle\Entity;
+namespace 'ProbandoBundle\Entity';
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * vemos
+ * Vemos
  *
  * @ORM\Table(name="vemos")
- * @ORM\Entity(repositoryClass="ProbandoBundle\Repository\vemosRepository")
+ * @ORM\Entity
  */
-class vemos
+class Vemos
 {
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=255)
+     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
      */
     private $nombre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="apellido", type="string", length=255)
+     * @ORM\Column(name="apellido", type="string", length=255, nullable=false)
      */
     private $apellido;
 
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="tel", type="smallint")
+     * @ORM\Column(name="tel", type="smallint", nullable=false)
      */
     private $tel;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cargo", type="string", length=255)
+     * @ORM\Column(name="cargo", type="string", length=255, nullable=false)
      */
     private $cargo;
 
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set nombre
-     *
-     * @param string $nombre
-     *
-     * @return vemos
-     */
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
-
-        return $this;
-    }
-
-    /**
-     * Get nombre
-     *
-     * @return string
-     */
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
-
-    /**
-     * Set apellido
-     *
-     * @param string $apellido
-     *
-     * @return vemos
-     */
-    public function setApellido($apellido)
-    {
-        $this->apellido = $apellido;
-
-        return $this;
-    }
-
-    /**
-     * Get apellido
-     *
-     * @return string
-     */
-    public function getApellido()
-    {
-        return $this->apellido;
-    }
-
-    /**
-     * Set tel
-     *
-     * @param integer $tel
-     *
-     * @return vemos
-     */
-    public function setTel($tel)
-    {
-        $this->tel = $tel;
-
-        return $this;
-    }
-
-    /**
-     * Get tel
-     *
-     * @return int
-     */
-    public function getTel()
-    {
-        return $this->tel;
-    }
-
-    /**
-     * Set cargo
-     *
-     * @param string $cargo
-     *
-     * @return vemos
-     */
-    public function setCargo($cargo)
-    {
-        $this->cargo = $cargo;
-
-        return $this;
-    }
-
-    /**
-     * Get cargo
-     *
-     * @return string
-     */
-    public function getCargo()
-    {
-        return $this->cargo;
-    }
 }
+

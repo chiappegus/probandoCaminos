@@ -109,3 +109,7 @@ C:\xampp\htdocs\borrar3_chiappegus\cookies\symfony-installer\probando>
 
 https://symfony.com/doc/current/doctrine.html
 
+
+Para pasar de base de datos a entity :)
+
+php bin/console doctrine:mapping:import 'ProbandoBundle\Entity' annotation --path=src/ProbandoBundle/Entity

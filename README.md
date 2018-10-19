@@ -408,3 +408,7 @@ generamos un crud , primero borramos el FORMtype
   php bin/console  generate:doctrine:crud ProbandoBundle:Vemos
 
 
+  LISTO!!! :)
+  
+
+
